@@ -1,11 +1,9 @@
-package org.example.AuthService.Service;
+package org.example.AuthService.SecurityFilter;
 
 import io.jsonwebtoken.Jwts;
-import org.example.AuthService.Entity.Entity;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.grpc.server.service.GrpcService;
-import org.springframework.security.oauth2.jwt.JwtClaimsSet;
 
 import javax.crypto.SecretKey;
 import java.util.Date;
