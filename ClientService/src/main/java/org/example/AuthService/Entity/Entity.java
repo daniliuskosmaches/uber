@@ -9,5 +9,6 @@ public class Entity {
     @NonNull
     private String id;
     private String name;
+    private int password;//всегда будет меняться
 
 }
