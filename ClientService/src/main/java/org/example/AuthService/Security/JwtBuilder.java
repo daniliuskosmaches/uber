@@ -1,4 +1,4 @@
-package org.example.AuthService.SecurityFilter;
+package org.example.AuthService.Security;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
