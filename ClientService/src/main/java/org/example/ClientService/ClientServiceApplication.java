@@ -1,13 +1,13 @@
-package org.example.trackerservice;
+package org.example.AuthService;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TrackerServiceApplication {
+public class ClientServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(TrackerServiceApplication.class, args);
+        SpringApplication.run(ClientServiceApplication.class, args);
     }
 
 }
