@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package org.example.auth;
+
+option java_multiple_files = true;
+option java_package = "org.example.authservices.grpc";
+option java_outer_classname = "AuthProto";
+
+service AuthService {
+
+  rpc Login (LoginRequest) returns (AuthResponse);
+
+  rpc Register (RegisterRequest) returns (AuthResponse);
+
+  rpc ValidateToken (ValidateTokenRequest) returns (ValidateTokenResponse);
+}
+
+// Сообщения для Login
+message LoginRequest {
+  string email = 1;
+  string password = 2;
+}
+
+// Сообщения для Register
+message RegisterRequest {
+  string email = 1;
+  string password = 2;
+  string full_name = 3;
+}
+
+// Общий ответ с токеном
+message AuthResponse {
+  string access_token = 1;
+  string refresh_token = 2;
+  int64 expires_in = 3;
+}
+
+// Запрос на проверку токена
+message ValidateTokenRequest {
+  string token = 1;
+}
+
+// Ответ валидации с данными пользователя (Claims)
+message ValidateTokenResponse {
+  bool is_valid = 1;
+  string user_id = 2;
+  string email = 3;
+  repeated string roles = 4;
+}
